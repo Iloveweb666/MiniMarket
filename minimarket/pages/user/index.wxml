@@ -1,0 +1,69 @@
+<view class="user_info_wrap">
+    <view class="user_image_wrap" wx:if="{{userinfo.avatarUrl}}">
+        <image class="user_bg" src="{{userinfo.avatarUrl}}"></image>
+        <view class="user_info">
+            <image class="user_icon" src="{{userinfo.avatarUrl}}"></image>
+            <view class="user_name">{{userinfo.nickName}}</view>
+        </view>
+    </view>
+    <view class="user_btn" wx:else>
+        <button plain bindgetuserinfo="handleGetUserInfo" open-type="getUserInfo"> 登录 </button>
+    </view>
+</view>
+<view class="user_content">
+    <view class="user_main">
+        <view class="history_wrap">
+            <navigator>
+                <view class="his_num">0</view>
+                <view class="his_name">收藏的店铺</view>
+            </navigator>
+            <navigator>
+                <view class="his_num">0</view>
+                <view class="his_name">收藏的商品</view>
+            </navigator>
+            <navigator>
+                <view class="his_num">0</view>
+                <view class="his_name">关注的店铺</view>
+            </navigator>
+            <navigator>
+                <view class="his_num">0</view>
+                <view class="his_name">我的足迹</view>
+            </navigator>
+        </view>
+        <view class="orders_wrap">
+            <view class="orders_title">我的订单</view>
+            <view class="orders_content" bindtap="handleWarn">
+                <navigator>
+                    <view class="iconfont icon-ding_dan"></view>
+                    <view class="order_name">全部订单</view>
+                </navigator>
+                <navigator>
+                    <view class="iconfont icon-fukuantongzhi"></view>
+                    <view class="order_name">代付款</view>
+                </navigator>
+                <navigator>
+                    <view class="iconfont icon-receipt-address"></view>
+                    <view class="order_name">待收货</view>
+                </navigator>
+                <navigator>
+                    <view class="iconfont icon-tuihuotuikuan_dianpu"></view>
+                    <view class="order_name">退款/退货</view>
+                </navigator>
+            </view>
+        </view>
+        <view class="address_wrap">
+            收货地址管理
+        </view>
+        <view class="app_info_wrap">
+            <view class="app_info_item app_info_contact">
+                <text>联系客服</text>
+                <text>400-618-4000</text>
+            </view>
+            <view class="app_info_item">意见反馈</view>
+            <view class="app_info_item">关于我们</view>
+        </view>
+        <view class="recommand_wrap">
+            把应用推荐给其他人
+        </view>
+    </view>
+</view>
